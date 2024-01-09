@@ -18,3 +18,4 @@ class Square(Rectangle):
         """ instantiation with size """
         self.__size = size
         super().__init__(self.__size, self.__size)
+        

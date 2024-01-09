@@ -12,3 +12,4 @@ class MyList(list):
         prints the list, but sorted
         '''
         print(sorted(self))
+        
