@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-''' Module: 1-my_list
-'''
+"""  New class """
 
 
 class MyList(list):
-    ''' Represents a MyList
-    '''
+    """ Mylist class that inherist from list """
 
     def print_sorted(self):
-        '''
-        prints the list, but sorted
-        '''
+        """ Fucntion that prints a sorted list """
         print(sorted(self))
