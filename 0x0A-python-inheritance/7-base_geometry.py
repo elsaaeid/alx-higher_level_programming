@@ -1,33 +1,24 @@
 #!/usr/bin/python3
-"""Module 7-base_geometry.py
-a class BaseGeometry with public instance methods
-"""
+"""Defines a base geometry class BaseGeometry."""
 
 
-class BaseGeometry():
-    """a class BaseGeometry with public instance methods."""
+class BaseGeometry:
+    """Reprsent base geometry."""
 
     def area(self):
-        """public instance that raises an Exception with the message
-        'area() is not implemented'."""
+        """Not yet implemented."""
+        raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """public instance that validates value.
-        if value is not an integer:
-         raise a TypeError exception, with the message <name> must be an integer
-        if value is less or equal to 0:
-         raise a ValueError exception with the message <name> must
-         be greater than 0
-
+        """Validate a parameter as an integer.
         Args:
-           name: a string.
-           value: value to validate.
+            name (str): The name of the parameter.
+            value (int): The parameter to validate.
+        Raises:
+            TypeError: If value is not an integer.
+            ValueError: If value is <= 0.
         """
-
-        self.name = name
-        self.value = value
-
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
-        if value < 0 or value == 0:
+        if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
