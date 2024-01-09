@@ -11,3 +11,4 @@ class MyInt(int):
     def __ne__(self, num):
         """ Function for not equals """
         return (int(self) == int(num))
+    
