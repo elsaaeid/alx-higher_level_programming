@@ -1,15 +1,17 @@
 #!/usr/bin/python3
-"""Module 14-pascal_triangle.
+"""Module 12-pascal_triangle.py
 Returns a list of lists of integers
-representing the Pascal’s triangle of n.
+representing the Pascal’s triangle of n
 """
 
 
 def pascal_triangle(n):
-    """Returns the pascal triangle of n.
+    """Returns the pascal's triangle of n.
+
     Args:
-        - n: size of the triangle (rows)
-    Returns: a list of list of integers
+       - n: size of the triangle (rows)
+
+    Return: a list of lists of integers
     """
 
     if n <= 0:
@@ -22,7 +24,7 @@ def pascal_triangle(n):
         l[i][0] = 1
         for j in range(1, i + 1):
             if j < len(l[i - 1]):
-                l[i][j] = l[i - 1][j - 1] + l[i - 1][j]
+                l[i][j] = l[i - 1][j - 1] +l[i - 1][j]
             else:
                 l[i][j] = l[i - 1][0]
     return l
