@@ -1,1 +1,1 @@
-# 0x0A. Python Inheritance - task
+# 0x0A-python-inheritance
