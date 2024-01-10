@@ -26,3 +26,4 @@ class Student:
         save = vars(self)
         for key, value in json.items():
             save[key] = value
+            

@@ -19,3 +19,4 @@ class Student:
                 if hasattr(self, nm):
                     dic[nm] = getattr(self, nm)
             return (dic)
+        
