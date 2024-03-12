@@ -2,5 +2,4 @@
 function add (a, b) {
     return a + b;
   }
-  const result = add(Number(process.argv[2]), Number(process.argv[3]));
-  console.log(`The sum is ${result}.`);
+  console.log(add(Number(process.argv[2]), Number(process.argv[3])));
