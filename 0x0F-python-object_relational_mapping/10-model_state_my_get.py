@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" script that lists all states from the database hbtn_0e_0_usa """
+"""
+    script that lists all states with a name starting
+    with N (upper N) from the database hbtn_0e_0_usa
+"""
 from sys import argv
 import MySQLdb
 if __name__ == "__main__":
@@ -12,7 +15,9 @@ if __name__ == "__main__":
         charset="utf8")
     cur = conn.cursor()
     try:
-        stmt = "SELECT * FROM states ORDER BY id ASC"
+        stmt = """
+        SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC
+        """
         cur.execute(stmt)
         rtn = cur.fetchall()
     except MySQLdb.Error:
@@ -23,8 +28,4 @@ if __name__ == "__main__":
     for i in rtn:
         print(i)
     cur.close()
-<<<<<<< HEAD
     conn.close()
-=======
-    conn.close()
->>>>>>> 2a13a8282be7ae6b81a734ae572002dcfe4304b0
