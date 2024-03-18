@@ -3,9 +3,12 @@
     script that takes in an argument and displays all values in the
     states table of hbtn_0e_0_usa where name matches the argument.
 """
+
 from sys import argv
 import MySQLdb
+# The code should not be executed when imported
 if __name__ == "__main__":
+    # make a connection to the database
     conn = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -28,5 +31,6 @@ if __name__ == "__main__":
             rtn = ("MySQLdb Error - IndexError")
     for i in rtn:
         print(i)
+    # Clean up process
     cur.close()
     conn.close()

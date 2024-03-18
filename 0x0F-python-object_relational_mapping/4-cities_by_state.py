@@ -2,7 +2,9 @@
 """ script that lists all cities from the database hbtn_0e_4_usa """
 from sys import argv
 import MySQLdb
+# The code should not be executed when imported
 if __name__ == "__main__":
+     # make a connection to the database
     conn = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -27,5 +29,6 @@ if __name__ == "__main__":
             rtn = ("MySQLdb Error - IndexError")
     for i in rtn:
         print(i)
+    # Clean up process
     cur.close()
     conn.close()

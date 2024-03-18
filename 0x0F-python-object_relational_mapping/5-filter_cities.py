@@ -5,7 +5,9 @@
 """
 from sys import argv
 import MySQLdb
+# The code should not be executed when imported
 if __name__ == "__main__":
+    # make a connection to the database
     conn = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -34,5 +36,7 @@ if __name__ == "__main__":
     for i in rtn:
         rslt += i
     print(", ".join(rslt))
+    # Clean up process
     cur.close()
     conn.close()
+    
