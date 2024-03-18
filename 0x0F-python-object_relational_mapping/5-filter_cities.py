@@ -39,4 +39,3 @@ if __name__ == "__main__":
     # Clean up process
     cur.close()
     conn.close()
-    
